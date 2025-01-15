@@ -3,6 +3,8 @@ steps:
   args: ['install']
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', '--version=$VERSION', '--quiet']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy', '--quiet']
 
 substitutions:
   _VERSION: v1
